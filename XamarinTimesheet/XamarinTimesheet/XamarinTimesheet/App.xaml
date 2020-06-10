@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTimesheet.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Gold"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <Style x:Key="lblInfoStyle" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="PowderBlue"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="15"/>
+            </Style>
+            <Style x:Key="lstViewStyle" TargetType="ListView">
+                <Setter Property="BackgroundColor" Value="BlueViolet"/>
+                <!--<Setter Property="TextColor" Value="NavajoWhite"/>-->
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="30"/>
+                <Setter Property="SeparatorColor" Value="NavajoWhite"/>
+            </Style>
+            <Style x:Key="pageContentPage" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="Aquamarine"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <!--<Setter Property="Padding" Value="0, 10, 0, 10"/>-->
+            </Style>
+
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTimesheet.GeolocationPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Coral">
+                <Label  Text="Tämä on Geolokaatiosivu"
+                        HorizontalOptions="CenterAndExpand" 
+                        FontSize="Large"/>
+
+                <StackLayout BackgroundColor="AntiqueWhite" Margin="10" Padding="5">
+                    <!--Etsitään osoitetiedot geolokaation avulla-->
+                    <StackLayout Orientation="Horizontal" >
+                        <Entry x:Name="GeoLatitude" Placeholder="Anna latitude"/>
+                        <Entry x:Name="GeoLongitude" Placeholder="Anna longitude"/>
+                        <Button x:Name="btnGetLocation" Text="Hae tiedot" Clicked="btnGetAddress_Clicked" Style="{StaticResource buttonStyle}"/>
+                    </StackLayout>
+                    <Label x:Name="lblGeoAddress" TextColor="Blue" HorizontalTextAlignment="Start"/>
+
+                    <!--Etsitään geolokaatiotiedot osoitteen perusteella-->
+                    <StackLayout Orientation="Vertical">
+                        <Entry x:Name="AddressInput" Placeholder="Anna osoite"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button x:Name="btnGetAddress" Text="Hae geolokaatio" Clicked="btnGetLocation_Clicked"  Style="{StaticResource buttonStyle}"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label x:Name="lblGeoLat" TextColor="Blue" HorizontalTextAlignment="Center"/>
+                                <Label x:Name="lblGeoLon" TextColor="Blue" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            
+                <!--Etsitään etäisyys nykyisen sijainnin ja kohteen välillä-->
+                <StackLayout Orientation="Vertical" Padding="10">
+                    <Label x:Name="DistanceHeader" Text="Etäisyytesi nykyisestä sijainnista antamaasi kohteeseen" FontSize="Large"></Label>
+                    <Entry x:Name="Destination" Placeholder="Anna kohteesi"></Entry>
+                    <Button x:Name="btnDistanceButton" Text="Laske etäisyys" Clicked="btnDistanceButton_Clicked" Style="{StaticResource buttonStyle}"></Button>
+                    <Label x:Name="lblDistance" BackgroundColor="AntiqueWhite" FontSize="Large" Padding="5"></Label>
+                </StackLayout>
+
+
+                <Button x:Name="btnBackToEmpoloyeePage" Text="Palaa takaisin" Clicked="btnBackToEmpoloyeePage_Clicked" Style="{StaticResource buttonStyle}"></Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTimesheet.WorkAssignmentPage" BackgroundColor="black">
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+            <Button Text="Lataa työtehtävät" Clicked="LoadWorkAssignments" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                BackgroundColor="black" TextColor="White" BorderColor="Orange" BorderWidth="1" Padding="30">
+            </Button>
+          
+        <ListView Margin="50" x:Name="assignmentList" />
+
+            <!-- Toinen stack layout, jossa  orientaatio on oletus, eli pystytasossa. -->
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Latitude" TextColor="White"></Label>
+                <Label x:Name="latitudeLabel" Text="0.000" TextColor="White"></Label>
+                </StackLayout>
+
+            <StackLayout Orientation="Horizontal"> 
+                <Label Text="Longitude" TextColor="White"></Label>
+                <Label x:Name="longitudeLabel" Text="0.000" TextColor="White"></Label>
+                
+            </StackLayout>
+
+            <!-- Kolmas stack layout, jossa  orientaatio on vaakatasossa. Alareunan napit saadaan vierekkäin-->
+            <StackLayout Orientation="Horizontal" >
+
+                <Button Text="Aloita työ" Clicked="StartWork" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                BackgroundColor="black" TextColor="White" BorderColor="LimeGreen" BorderWidth="1" Padding="30">
+                </Button>
+
+                <Button Text="Lopeta työ" Clicked="StopWork" CornerRadius="5" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                BackgroundColor="black" TextColor="White" BorderColor="MediumVioletRed" BorderWidth="1" Padding="30">
+                </Button>
+
+            </StackLayout>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

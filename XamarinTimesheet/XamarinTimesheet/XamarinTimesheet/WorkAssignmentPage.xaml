@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTimesheet.WorkAssignmentPage" 
+             Style="{StaticResource pageContentPage}">
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Aquamarine">
+            <Button x:Name="btnGetWorkAssignments" Text="Lataa työtehtävät" Clicked="btnGetWorkAssignments_Clicked" Style="{StaticResource buttonStyle}"/>
+            <ListView x:Name="listWorkAssignments" Style="{StaticResource lstViewStyle}" />
+            <ScrollView>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Coral" Margin="10" Padding="5" >
+                    <Label x:Name="sijainti" Text="Sijaintisi:" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label x:Name="lblLatitude" FontSize="Medium" />
+                        <Label x:Name="lblLongitude" FontSize="Medium" />
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="btnStartWork" Text="Aloita työ" Clicked="btnStartWork_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Button x:Name="btnStopWork" Text="Lopeta työ" Clicked="btnStopWork_Clicked" Style="{StaticResource buttonStyle}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
